@@ -17,17 +17,16 @@ Pod::Spec.new do |s|
 
   s.name         = "LTCarouseView"
   s.version      = "0.0.1"
-  s.summary      = "A short description of LTCarouseView."
+  s.summary      = "A Cycle Scroll View."
+  s.ios.deployment_target = '8.0'
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = <<-DESC
-                   DESC
-
-  s.homepage     = "http://EXAMPLE/LTCarouseView"
+  s.description  = <<-DESC DESC
+  s.homepage     = "https://github.com/leeCoding"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -38,8 +37,8 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT (example)"
-  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  #s.license      = "MIT (example)"
+  s.license= { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -79,8 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "http://EXAMPLE/LTCarouseView.git", :tag => "#{s.version}" }
-
+  s.source       = { :git => "https://github.com/leeCoding/LTCarouseViewDemo.git", :tag => "#{s.version}" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -90,8 +88,8 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Classes", "Classes/**/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
+  s.source_files  = "LTCarouseViewDemo/LTCarouseView", "LTCarouseViewDemo/LTCarouseView/**/*.{h,m}"
+  # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
 
@@ -129,9 +127,9 @@ Pod::Spec.new do |s|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  # s.requires_arc = true
+  s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # s.dependency "JSONKit", "~> 1.4"
+  s.dependency "SDWebImage"
 
 end
